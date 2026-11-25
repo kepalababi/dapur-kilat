@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #241a10; }
+body { font-family: system-ui, -apple-system, sans-serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 12px; }
+canvas { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.45); cursor: pointer; }
+.hint { color: #d8b98a; text-align: center; font-size: 13px; margin: 10px 0 0; }
