@@ -170,13 +170,9 @@ function drawOrderBoard(ctx, s) {
     ctx.font = '12px system-ui, sans-serif';
     ctx.fillStyle = COLORS.muted;
     ctx.fillText(order.customer, ox + 10, oy + 34);
-    ctx.textAlign = 'right';
     ctx.fillStyle = '#b7791f';
-    ctx.font = 'bold 13px system-ui, sans-serif';
-    ctx.fillText('Rp' + order.recipe.value + 'k', ox + ow - 10, oy + 18);
-    ctx.fillStyle = frac < 0.3 ? COLORS.danger : COLORS.muted;
     ctx.font = 'bold 12px system-ui, sans-serif';
-    ctx.fillText(Math.ceil(order.left) + ' dtk', ox + ow - 10, oy + 34);
+    ctx.fillText('Rp' + order.recipe.value + 'k  •  ' + Math.ceil(order.left) + ' dtk', ox + 10, oy + 50);
     drawMiniStack(ctx, order.recipe.stack, ox + ow - 78, oy + 6, 64);
   }
 }
@@ -272,7 +268,7 @@ function drawCounter(ctx, s) {
     ctx.font = '11px system-ui, sans-serif';
     ctx.fillText('tombol ' + ing.key, x + bw / 2, y + 82);
   }
-  ctx.fillStyle = '#ffe9c4';
+  ctx.fillStyle = COLORS.muted;
   ctx.font = '12px system-ui, sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText('Klik bahan untuk menumpuk di piring • Sajikan saat tumpukan sama dengan pesanan', DK.canvasW / 2, 576);
